@@ -32,6 +32,15 @@ jobs:
       - name: Build website
         run: python build.py
 
+      - name: Inspect build
+        run: |
+          echo "Build contents:"
+          find ./build -type f -print
+
+          echo ""
+          echo "Version file:"
+          cat ./build/version.json
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

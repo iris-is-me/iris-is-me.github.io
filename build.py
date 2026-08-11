@@ -8,9 +8,7 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).parent
 BUILD = ROOT / "build"
 
-version = {
-    "version": datetime.now(timezone.utc).isoformat()
-}
+
 
 def inject_update_script():
     index = BUILD / "index.html"
@@ -22,7 +20,7 @@ def inject_update_script():
 
     html = index.read_text(encoding="utf-8")
 
-    script = '<script src="/update-check.js"></script>'
+    script = '<script src="./update-check.js"></script>'
 
     if script not in html:
         html = html.replace(
@@ -36,6 +34,11 @@ def inject_update_script():
     )
 
 def main():
+
+    version = {
+    "version": datetime.now(timezone.utc).isoformat()
+    }
+    
     # Remove previous build
     if BUILD.exists():
         shutil.rmtree(BUILD)
