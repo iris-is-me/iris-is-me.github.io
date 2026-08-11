@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,41 +23,69 @@
         .intro {
           max-width: 700px;
           margin: 0 auto;
-          text-align: left;
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+        }
+        
+        .profile-column {
+          box-sizing: border-box;
+          width: 200px  ;
+          height: fit-content;
+          flex-shrink: 0;
+          text-align: center;
+          border: 2px solid #666;
+          border-radius: 12px;
+          padding: 10px;
         }
 
         .profile-img {
-          float: left;
-          margin: 0 20px 10px 0;
-          border: 1px solid #666;
+          margin: 0;
           border-radius: 12px;
         }
 
-        .intro::after {
-          content: "";
-          display: block;
-          clear: both;
+        .profile-column h2 {
+          font-size: 1.2rem;
+          margin: 15px 0 10px;
         }
 
-        .intro img {
-          border: 1px solid #666;
-          border-radius: 12px;
+        .connected-profiles {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          gap: 8px;
+          line-height: 0;
+        }
+
+        .connected-profiles a {
           flex-shrink: 0;
+          line-height: 0;
+        }
+
+        .connected-profiles img {
+          display: block;
+          height: 25px;
+          width: auto;
+          max-width: none;
+          border-radius: 8px;
         }
 
         .intro-text {
+          flex: 1;
           text-align: left;
-          max-width: 500px;
         }
 
         @media (max-width: 700px) {
           .intro {
             flex-direction: column;
-            text-align: center;
+            align-items: center;
           }
         
           .intro-text {
-            text-align: left;
+             text-align: left;
+             width: 100%;
           }
         }
       </style>
@@ -68,28 +97,44 @@
     <h1 align="center">Hey there!</h1>
   
     <div class="intro">
-        <a href="https://github.com/iris-is-me">
-          <img
-            src="github/assets/images/image.png"
-            width="200"
-            alt="Iris-is-me"
-            class="profile-img">
-        </a>
-      
-        <p>
-          I’m a developer focused on Python, animation, and 3D modelling.<br><br>
-      
-          I build tools and automation systems, and I enjoy improving workflows and
-          understanding how systems work.<br><br>
-
-          Some of my recent projects involve Discord bots, Python applications, and 
-          creative projects using 3D modelling and animation tools. 
-          I enjoy experimenting with new ideas and learning technologies that help me build better software.<br><br>
-
-          When I’m not coding, I’m usually exploring new tools, refining existing projects, or working on creative digital content.<br><br>
-        
-        </p>
+      <div class="profile-column">
+            <img
+              src="github/assets/images/image.png"
+              width="100%"
+              alt="Iris-is-me"
+              class="profile-img">
+  
+          <h2>Connected profiles</h2>
+  
+          <div class="connected-profiles">
+              <a href="https://github.com/iris-is-me">
+                  <img src="https://img.shields.io/badge/-181717?style=for-the-badge&logo=GitHub&logoColor=ffffff">
+              </a>
+              <a href="https://discord.gg/UGMkqVdtQ8">
+                  <img src="https://img.shields.io/badge/-5865F2?style=for-the-badge&logo=Discord&logoColor=ffffff">
+              </a>
+              <a href="https://blockbenchworkshop.com/creator/iris">
+                  <img src="https://img.shields.io/badge/Comissions_closed-676767?style=for-the-badge&logo=Blockbench">
+              </a>
       </div>
+      </div>
+  
+      <div class="intro-text">
+          <p>
+              I’m a developer focused on Python, animation, and 3D modelling.<br><br>
+  
+              I build tools and automation systems, and I enjoy improving workflows and
+              understanding how systems work.<br><br>
+  
+              Some of my recent projects involve Discord bots, Python applications, and
+              creative projects using 3D modelling and animation tools.
+              I enjoy experimenting with new ideas and learning technologies that help me build better software.<br><br>
+  
+              When I’m not coding, I’m usually exploring new tools, refining existing projects,
+              or working on creative digital content.<br><br>
+          </p>
+      </div>
+    </div>
   
     <br clear="both">
   
@@ -128,11 +173,6 @@
       <img src="https://img.shields.io/badge/Discord-Bot%20Development-a434e0?style=for-the-badge&logo=discord">
       <img src="https://img.shields.io/badge/VS%20Code-Primary%20Editor-blue?style=for-the-badge&logo=visualstudiocode">
     </p> -->
-    <h2 align="center">Connected profiles</h2>
-    <p align="center">
-        <a href="https://discord.gg/UGMkqVdtQ8"><img src="https://img.shields.io/badge/Discord-676767?style=for-the-badge&logo=Discord"></a>
-        <a href="https://blockbenchworkshop.com/creator/iris"><img src="https://img.shields.io/badge/BlockBench_Workshop-676767?style=for-the-badge&logo=Blockbench"></a>
-    </p>
     </article>
 </body>
 </html>
