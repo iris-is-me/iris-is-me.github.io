@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  background: #0d1117;
+}
+      
+.markdown-body {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+        
+.profile-column {
+  box-sizing: border-box;
+  width: 200px  ;
+  height: fit-content;
+  flex-shrink: 0;
+  text-align: center;
+  border: 2px solid #666;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.profile-img {
+  margin: 0;
+  border-radius: 12px;
+}
+
+.profile-column h2 {
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+}
+
+/* Anything that inherits this can inherit its props. Most commonly, <div> containers */
+.connected-profiles {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 0;
+}
+
+/* Specifically for <a> containers. If inside a <div class="connected-profiles">, will automatically apply */
+.connected-profiles a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #666;
+    
+    width: 30px;
+    height: 25px;
+    
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Specifically for <img> containers. If inside a <div class="connected-profiles">, will automatically apply */
+.connected-profiles img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.connected-profiles-github {
+  position: relative;
+}
+
+.connected-profiles-github img {
+  visibility: hidden;
+}
+
+.connected-profiles-github::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: white;
+  mask: url("assets/images/github.svg") center / contain no-repeat;
+}
+
+.connected-profiles-discord {
+  position: relative;
+}
+
+.connected-profiles-discord img {
+  visibility: hidden;
+}
+
+.connected-profiles-discord::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: white;
+  mask: url("assets/images/discord.svg") center / contain no-repeat;
+}
+
+.skills-section {
+  max-width: auto;
+}
+
+.skills-section img {
+  border-radius: 12px;
+
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text {
+     text-align: left;
+     width: 100%;
+  }
+}
