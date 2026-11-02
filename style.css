@@ -116,6 +116,10 @@ body {
 
 }
 
+.rounded {
+  border-radius: 12px;
+}
+
 .intro-text {
   flex: 1;
   text-align: left;
