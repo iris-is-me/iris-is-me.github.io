@@ -13,7 +13,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css" loading="lazy">
     <link rel="stylesheet" href="style.css">
-    <script src="/script.js" defer></script>
+    
+    <script src="/script.js" type="module"></script>
 
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
@@ -29,7 +30,9 @@
               src="assets/images/image.png"
               width="100%"
               alt="Iris-is-me"
-              class="profile-img">
+              class="profile-img"
+              loading="eager"
+            >
   
           <!-- <h2>Connected profiles</h2> -->
            
@@ -37,16 +40,12 @@
   
           <div class="connected-profiles">
 
-              <a href="https://github.com/iris-is-me" class="connected-profiles-github">
-                  <img src="assets/images/github.svg">
-              </a>
+              <a id="github-profile" href="https://github.com/iris-is-me" class="connected-profiles-github"></a>
 
-              <a href="https://discord.gg/dcBPGYyd4Z" style="background-color: #4649ee;"  class="connected-profiles-discord">
-                  <img src="assets/images/discord.svg">
-              </a>
+              <a id="discord-profile" href="https://discord.gg/dcBPGYyd4Z" style="background-color: #4649ee;"  class="connected-profiles-discord"></a>
 
               <a href="https://blockbenchworkshop.com/creator/iris">
-                  <img src="/assets/images/BBWorkshop.png">
+                  <img src="https://blockbenchworkshop.com/logo.webp">
               </a>
 
           </div>
@@ -74,13 +73,18 @@
     <h2 align="center">My Skills</h2>
     <p align="center" class="skills-section">
       <a href="https://python.org"><img src="https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=yellow"></a>
-      <a href="https://www.markdownguide.org"><img src="https://img.shields.io/badge/MarkDown-000?style=for-the-badge&logo=MarkDown"></a>
       <a href="https://www.w3schools.com/html/"><img src="https://img.shields.io/badge/HTML-000?style=for-the-badge&logo=HTML5"></a>
       <a href="https://www.w3schools.com/css/"><img src="https://img.shields.io/badge/CSS-000?style=for-the-badge&logo=CSS&logoColor=blue"></a>
       <a href="https://www.w3schools.com/javascript/"><img src="https://img.shields.io/badge/Javascript-000?style=for-the-badge&logo=javascript"></a>
       <a href="https://www.w3schools.com/sql/"><img src="https://img.shields.io/badge/sqlite-000?style=for-the-badge&logo=sqlite"></a>
+    </p>
+
+    <h2 align="center">Tools I use</h2>
+    
+    <p align="center" class="skills-section">
+      <a href="https://www.markdownguide.org"><img src="https://img.shields.io/badge/MarkDown-000?style=for-the-badge&logo=MarkDown"></a>
       <a href="https://blockbench.net"><img src="https://img.shields.io/badge/Blockbench-000?style=for-the-badge&logo=BlockBench&logoColor=blue"></a>
-      <a href="https://www.blender.org"><img src="https://img.shields.io/badge/Blender-000?style=for-the-badge&logo=Blender"></a>
+      <a href="https://www.blender.org"><img src="https://img.shields.io/badge/Blender-000?style=for-the-badge&logo=Blender&logoColor=e87d0d"></a>
     </p>
   
     <h2 align="center">GitHub Stats</h2>
