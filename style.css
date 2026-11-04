@@ -79,24 +79,16 @@ body {
   position: relative;
 }
 
-.connected-profiles-github img {
-  visibility: hidden;
-}
-
 .connected-profiles-github::after {
   content: "";
   position: absolute;
   inset: 4px;
   background: white;
-  mask: url("assets/images/github.svg") center / contain no-repeat;
+  mask: url("https://simpleicons.org/icons/github.svg") center / contain no-repeat;
 }
 
 .connected-profiles-discord {
   position: relative;
-}
-
-.connected-profiles-discord img {
-  visibility: hidden;
 }
 
 .connected-profiles-discord::after {
@@ -104,7 +96,7 @@ body {
   position: absolute;
   inset: 4px;
   background: white;
-  mask: url("assets/images/discord.svg") center / contain no-repeat;
+  mask: url("https://simpleicons.org/icons/discord.svg") center / contain no-repeat;
 }
 
 .skills-section {
